@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/impoCard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:layout_marginHorizontal="15dp"
+    android:clickable="true"
+    android:stateListAnimator="@animator/selection"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_marginVertical="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtState"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Andaman and Nicobar Islands"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txtphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caller_background"
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/poppins"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="+91-191-2520982"
+                android:textColor="#000000"
+                android:textSize="11sp"
+                app:drawableStartCompat="@drawable/ic_phone"
+                tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/txtphone2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/caller_background"
+                    android:drawablePadding="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="+91-191-2520982"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_phone"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

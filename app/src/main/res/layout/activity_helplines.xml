@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".Activity.Helplines">
+
+    <ImageView
+        android:id="@+id/backButton1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/backbutton" />
+
+    <TextView
+        android:id="@+id/txtHelplines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/asul"
+        android:text="Helplines"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/images"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtHelplines"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="30dp"
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="25dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/phone"
+            android:stateListAnimator="@animator/selection" />
+
+        <ImageView
+            android:id="@+id/twitter"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="25dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/twitter"
+            android:stateListAnimator="@animator/selection" />
+
+        <ImageView
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="25dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/email"
+            android:stateListAnimator="@animator/selection" />
+
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="25dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/facebook"
+            android:stateListAnimator="@animator/selection" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerHelplines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/images"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backcolor">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressBar4"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            app:SpinKit_Color="#ffffff" />
+
+        <TextView
+            android:id="@+id/textFetching4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetching Data..."
+            android:fontFamily="@font/poppins"
+            android:layout_below="@+id/progressBar4"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:layout_marginTop="15dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

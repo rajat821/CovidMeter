@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="0dp"
+    tools:context=".Activity.SplashScreen">
+
+    <RelativeLayout
+        android:id="@+id/relativeSecond"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/splash_new"
+        android:elevation="100dp">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/salsa"
+            android:text="Welcome Rajat ,"
+            android:textColor="#4BC0F6"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/hope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcome"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/salsa"
+            android:text="Hope that you are Safe !!"
+            android:textColor="#4BC0F6"
+            android:textSize="23sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/imageWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_below="@id/hope"
+            android:layout_above="@id/txtCovid2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            app:lottie_fileName="hand.json"
+            app:lottie_speed="1.5"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+
+        <TextView
+            android:id="@+id/txtCovid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/bubblegum_sans"
+            android:text="Covid'19  Meter"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/txtSecond2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCovid2"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/bubblegum_sans"
+            android:text="Stay Home || Stay Safe || Save Lives"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSecond2"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="75dp"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/firstImage"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/wear_mask" />
+
+            <ImageView
+                android:id="@+id/secondImage"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/wash_hands" />
+
+            <ImageView
+                android:id="@+id/thirdImage"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/keep_distance" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="4dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/firstText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Wear Mask"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/bubblegum_sans"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/secondText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Wash Hands"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/bubblegum_sans"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/thirdText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Keep Distance"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/bubblegum_sans"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/splash"
+        android:layout_marginTop="-2dp"
+        android:elevation="100dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/mask"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:lottie_fileName="mask.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+
+
+        <TextView
+            android:id="@+id/txtCovid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Covid'19  Meter"
+            android:fontFamily="@font/bubblegum_sans"
+            android:layout_marginTop="155dp"
+            android:textColor="#ffffff"
+            android:textSize="35sp"/>
+
+        <TextView
+            android:id="@+id/txtSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bubblegum_sans"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtCovid"
+            android:text="Stay Home || Stay Safe || Save Lives"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/gettingStarted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Getting Started"
+            android:layout_marginTop="120dp"
+            android:layout_marginStart="35dp"
+            android:layout_below="@id/txtSecond"
+            android:textColor="#70CEFA"
+            android:textSize="25sp"
+            android:fontFamily="@font/poppins"/>
+
+        <LinearLayout
+            android:id="@+id/llName"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/gettingStarted"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:weightSum="6"
+            android:orientation="horizontal"
+            android:background="@drawable/splash_material">
+
+            <EditText
+                android:id="@+id/getName"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="match_parent"
+                android:hint="Enter Your Name"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="#720285"
+                android:padding="5dp"
+                android:background="#ffffff"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/forward"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:lottie_fileName="arrow.json"
+                android:background="#ffffff"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/bubblegum_sans"
+        android:text="Designed and Developed by Rajat"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp" />
+
+
+
+</RelativeLayout>

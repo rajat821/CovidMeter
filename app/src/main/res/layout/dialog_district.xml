@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:elevation="10dp"
+                android:background="@color/colorPrimaryDark"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:id="@+id/textdistrict"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="District"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_close"
+                    android:layout_alignParentEnd="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:focusable="true" />
+
+            </RelativeLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/imageStats"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/header"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                app:lottie_fileName="statsnew.json"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"/>
+
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_below="@+id/imageStats"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="30dp"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    android:background="@drawable/district_blue"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/districtConfirmedToday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="105"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="10sp"
+                        android:alpha="0.5"
+                        android:layout_above="@id/districtConfirmed"
+                        app:drawableStartCompat="@drawable/ic_blue"
+                        tools:ignore="SmallSp" />
+
+
+                    <TextView
+                        android:id="@+id/districtConfirmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/textCon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="10523"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textCon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Confirmed"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/district_yellow"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    android:layout_weight="1">
+
+
+                    <TextView
+                        android:id="@+id/districtActive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="10523"
+                        android:layout_above="@id/textAct"
+                        android:textColor="#EDB204"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textAct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppins"
+                        android:layout_alignParentBottom="true"
+                        android:text="Active"
+                        android:textColor="#EDB204"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_below="@+id/linear"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    android:background="@drawable/district_green"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/districtRecoveredToday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="105"
+                        android:textColor="#059729"
+                        android:textSize="10sp"
+                        android:layout_above="@id/districtRecovered"
+                        app:drawableStartCompat="@drawable/ic_green"
+                        android:alpha="0.7"
+                        tools:ignore="SmallSp" />
+
+
+                    <TextView
+                        android:id="@+id/districtRecovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/textRec"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="10523"
+                        android:textColor="#059729"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textRec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Recovered"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="#059729"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/district_red"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/districtDeathToday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="105"
+                        android:textColor="#F4511E"
+                        android:textSize="10sp"
+                        android:alpha="0.7"
+                        android:layout_above="@id/districtDeath"
+                        app:drawableStartCompat="@drawable/ic_red"
+                        tools:ignore="SmallSp" />
+
+
+                    <TextView
+                        android:id="@+id/districtDeath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/textDeath"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="2dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="10523"
+                        android:textColor="#F4511E"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textDeath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Deaths"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="#F4511E"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/dialogLayout"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/header"
+                android:layout_height="match_parent"
+                android:background="@drawable/backcolorfragment">
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/dialogProgress"
+                    style="@style/SpinKitView.Large.Circle"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    app:SpinKit_Color="@color/colorPrimaryDark" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

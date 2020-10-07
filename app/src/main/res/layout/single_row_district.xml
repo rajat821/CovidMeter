@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/districtCard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="155dp"
+    android:layout_height="120dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="15dp"
+    app:cardCornerRadius="20dp"
+    android:clickable="true"
+    android:stateListAnimator="@animator/selection"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:focusable="true"
+    app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textdistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins"
+                android:paddingHorizontal="7dp"
+                android:text="District"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textdistrictData"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="65dp"
+                android:fontFamily="@font/poppins"
+                android:text="38526"
+                android:textColor="#FF0000"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_baseline_arrow_drop_up_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:fontFamily="@font/poppins"
+                android:text="Confirmed Cases"
+                android:textAlignment="center"
+                android:textColor="#FF0000"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

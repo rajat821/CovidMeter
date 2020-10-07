@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.WorldStats">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:stateListAnimator="@animator/selection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="15dp"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/country">
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="215"
+                android:fontFamily="@font/poppins"
+                android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:textColor="#DC15FD"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/corona"
+                android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Countries got affected"
+                android:fontFamily="@font/poppins"
+                android:textSize="15sp"
+                android:textColor="#DC15FD"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="due to COVID'19"
+                android:fontFamily="@font/poppins"
+                android:layout_gravity="center_vertical"
+                android:layout_below="@+id/first"
+                android:textSize="15sp"
+                android:layout_marginStart="15dp"
+                android:textColor="#DC15FD"/>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/corona"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="20dp"
+                android:src="@drawable/cv"
+                android:layout_toEndOf="@+id/country"
+                android:layout_gravity="center_vertical"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFirst"
+        android:layout_width="160dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="180dp"
+        app:cardElevation="15dp"
+        android:layout_below="@id/card"
+        android:clickable="true"
+        android:stateListAnimator="@animator/selection"
+        android:focusable="true"
+        android:layout_alignParentStart="true"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backindia0">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/confirmedstats"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"
+                android:text="Confirmed"
+                android:textColor="#0800FF"/>
+
+            <TextView
+                android:id="@+id/worldConfirmedToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/poppins"
+                android:text="13200"
+                android:alpha="0.5"
+                android:textSize="11sp"
+                android:textColor="#0800FF"
+                app:drawableStartCompat="@drawable/ic_blue"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/worldConfirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp"
+                android:fontFamily="@font/poppins"
+                android:text="3126542"
+                android:textColor="#0800FF"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSecond"
+        android:layout_width="160dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="15dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_below="@id/card"
+        android:clickable="true"
+        android:stateListAnimator="@animator/selection"
+        android:focusable="true"
+        app:cardElevation="15dp"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backindia1">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/activestats"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"
+                android:text="Active"
+                android:textColor="#FF0000"/>
+
+            <TextView
+                android:id="@+id/worldActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp"
+                android:fontFamily="@font/poppins"
+                android:text="3126542"
+                android:textColor="#FF0000"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardThird"
+        android:layout_width="160dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="180dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        android:clickable="true"
+        android:stateListAnimator="@animator/selection"
+        android:focusable="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cardFirst">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backindia2">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/recoverstats"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"
+                android:text="Recovered"
+                android:textColor="#09AC04"/>
+
+            <TextView
+                android:id="@+id/worldRecoveredToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/poppins"
+                android:text="13200"
+                android:alpha="0.5"
+                android:textSize="11sp"
+                android:textColor="#09AC04"
+                app:drawableStartCompat="@drawable/ic_green" />
+
+            <TextView
+                android:id="@+id/worldRecovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp"
+                android:fontFamily="@font/poppins"
+                android:text="3126542"
+                android:textColor="#09AC04"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFourth"
+        android:layout_width="160dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="15dp"
+        android:layout_height="180dp"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:stateListAnimator="@animator/selection"
+        android:focusable="true"
+        android:layout_below="@id/cardSecond"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backindia3">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/deathstats"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"
+                android:text="Deaths"
+                android:textColor="#7D7D81"/>
+
+            <TextView
+                android:id="@+id/worldDeathToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/poppins"
+                android:text="13200"
+                android:alpha="0.5"
+                android:textSize="11sp"
+                android:textColor="#7D7D81"
+                app:drawableStartCompat="@drawable/ic_grey24" />
+
+            <TextView
+                android:id="@+id/worldDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp"
+                android:fontFamily="@font/poppins"
+                android:text="3126542"
+                android:textColor="#7D7D81"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFifth"
+        android:layout_width="160dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_height="180dp"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="15dp"
+        android:clickable="true"
+        android:stateListAnimator="@animator/selection"
+        android:focusable="true"
+        android:layout_below="@id/cardFourth"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backworld4">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/criticalstats"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"
+                android:text="Critical"
+                android:textColor="#FFAA16"/>
+
+
+            <TextView
+                android:id="@+id/worldCritical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp"
+                android:fontFamily="@font/poppins"
+                android:text="3126542"
+                android:textColor="#FFAA16"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp"
+        android:background="@drawable/backcolorfragment">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressBar"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            app:SpinKit_Color="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/textFetching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetching Data..."
+            android:layout_below="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="13dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
